@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Franciele Teixeira Beauty</title>
+  <link rel="icon" type="image/png" href="imagens/logo.png" />
 
   <meta name="description" content="Franciele Teixeira Beauty: alisamentos, sobrancelhas, depilação e tratamentos faciais. Sua melhor versão começa aqui." />
 
@@ -15,13 +16,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:   #FFF8F2;
-      --rose:    #8B4A3D;
-      --gold:    #C89B5C;
-      --gold-lt: #E8C99A;
-      --blush:   #D4A190;
-      --text:    #3A2A22;
-      --muted:   #A98868;
+      --cream:   #FBF7EF;
+      --gold:    #B8863A;
+      --gold-lt: #E8CE9C;
+      --gold-dk: #8C5F1E;
+      --bronze:  #3A2410;
+      --text:    #3A2A15;
+      --muted:   #9C8558;
     }
 
     html, body {
@@ -38,8 +39,8 @@
       position: fixed;
       inset: 0;
       background-image:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(200,155,92,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 90% 100%, rgba(212,161,144,0.14) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(184,134,58,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 90% 100%, rgba(232,206,156,0.20) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -85,7 +86,7 @@
       position: relative;
       z-index: 0;
       height: 220px;
-      background: linear-gradient(150deg, var(--blush) 0%, var(--gold) 100%);
+      background: linear-gradient(150deg, var(--gold-dk) 0%, var(--gold) 55%, var(--gold-lt) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -122,7 +123,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(139,74,61,0.25);
+      box-shadow: 0 6px 20px rgba(140,95,30,0.25);
       background: var(--cream);
     }
     .avatar-inner {
@@ -143,11 +144,23 @@
     }
 
     /* ── NOME / HEADER ── */
+    .brand-eyebrow {
+      display: block;
+      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
     .name {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       font-size: 30px;
-      color: var(--rose);
+      color: var(--gold-dk);
       text-align: center;
       line-height: 1.2;
       letter-spacing: 2px;
@@ -166,9 +179,10 @@
 
     .tagline {
       margin-top: 10px;
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 0.4px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
       color: var(--muted);
       text-align: center;
     }
@@ -184,7 +198,7 @@
       border-radius: 50%;
       border: 1.5px solid var(--gold-lt);
       display: flex; align-items: center; justify-content: center;
-      color: var(--rose);
+      color: var(--gold-dk);
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
     }
@@ -225,7 +239,7 @@
     .marquee-content { display: flex; align-items: center; white-space: nowrap; }
     .marquee-item {
       font-size: 13px;
-      color: var(--rose);
+      color: var(--gold-dk);
       letter-spacing: 0.5px;
       padding: 0 6px;
     }
@@ -246,7 +260,7 @@
       border-radius: 16px;
       overflow: hidden;
       border: 1.5px solid var(--gold-lt);
-      box-shadow: 0 8px 20px rgba(139,74,61,0.18);
+      box-shadow: 0 8px 20px rgba(140,95,30,0.18);
     }
     .about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .about-content { flex: 1; min-width: 0; }
@@ -254,7 +268,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       font-size: 21px;
-      color: var(--rose);
+      color: var(--gold-dk);
       margin-bottom: 6px;
     }
     .about-text { font-size: 13px; line-height: 1.6; color: var(--text); font-weight: 300; }
@@ -267,11 +281,18 @@
       gap: 10px;
       text-align: center;
     }
+    .feature-item {
+      background: var(--cream);
+      border: 1.5px solid var(--gold-lt);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(140,95,30,0.18);
+      padding: 18px 10px 16px;
+    }
     .feature-icon {
       width: 46px; height: 46px;
       margin: 0 auto 10px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--rose));
+      background: linear-gradient(135deg, var(--gold), var(--gold-dk));
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 6px 14px rgba(200,155,92,0.35);
     }
@@ -281,7 +302,7 @@
       font-weight: 600;
       font-size: 13px;
       letter-spacing: 0.03em;
-      color: var(--rose);
+      color: var(--gold-dk);
       line-height: 1.3;
       margin-bottom: 6px;
       text-transform: uppercase;
@@ -313,11 +334,11 @@
       pointer-events: none; z-index: 1;
     }
     .btn > * { position: relative; z-index: 2; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(139,74,61,0.3); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(140,95,30,0.3); }
     .btn:active { transform: translateY(0); }
 
     .btn-agendar { background: linear-gradient(135deg, var(--gold), #A97B3E); } /* dourado, alinhado à paleta da marca */
-    .btn-trabalhos { background: linear-gradient(135deg, var(--rose), #6E3A2F); }
+    .btn-trabalhos { background: linear-gradient(135deg, var(--bronze), #241505); }
     .btn-maps { background: linear-gradient(135deg, var(--gold-lt), var(--gold)); }
 
     .btn-icon {
@@ -353,12 +374,12 @@
       overflow: hidden;
       border: 1.5px solid var(--gold-lt);
       position: relative;
-      box-shadow: 0 8px 20px rgba(139,74,61,0.15);
+      box-shadow: 0 8px 20px rgba(140,95,30,0.15);
     }
     .map-wrap iframe { width: 100%; height: 200px; border: 0; display: block; }
     .map-address {
       position: absolute; left: 12px; bottom: 12px;
-      background: rgba(58,42,34,0.85);
+      background: rgba(58,36,16,0.85);
       color: white;
       font-size: 11px;
       padding: 8px 12px;
@@ -370,7 +391,7 @@
     /* ── POPUP AGENDAMENTO ── */
     .popup-overlay {
       position: fixed; inset: 0;
-      background: rgba(58,42,34,0.55);
+      background: rgba(58,36,16,0.55);
       display: none;
       align-items: flex-end;
       justify-content: center;
@@ -395,16 +416,16 @@
       position: absolute; top: 16px; right: 16px;
       width: 32px; height: 32px;
       border-radius: 50%;
-      background: rgba(139,74,61,0.08);
+      background: rgba(140,95,30,0.08);
       border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      color: var(--rose);
+      color: var(--gold-dk);
       z-index: 5;
     }
 
     .agenda-box { padding: 32px 24px 24px; text-align: center; }
     .agenda-eyebrow { font-size: 11px; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; }
-    .agenda-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: var(--rose); margin: 6px 0 4px; }
+    .agenda-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: var(--gold-dk); margin: 6px 0 4px; }
     .agenda-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
 
     .agenda-options { display: flex; flex-direction: column; gap: 10px; text-align: left; }
@@ -422,7 +443,7 @@
     .agenda-btn-icon {
       width: 34px; height: 34px; flex-shrink: 0;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--rose));
+      background: linear-gradient(135deg, var(--gold), var(--gold-dk));
       display: flex; align-items: center; justify-content: center;
     }
     .agenda-btn-icon svg { width: 16px; height: 16px; }
@@ -446,13 +467,14 @@
   <div class="avatar-wrap fi fi-1">
     <div class="avatar-ring">
       <div class="avatar-inner">
-        <img src="imagens/fran.jpg" alt="Franciele Teixeira Beauty" />
+        <img src="imagens/logo.png" alt="Ft Beauty Salon - Especialista em Alisamentos" />
       </div>
     </div>
   </div>
 
+  <span class="brand-eyebrow fi fi-2">Beauty Salon</span>
   <h1 class="name fi fi-2">FRANCIELE<em>Beauty</em></h1>
-  <p class="tagline fi fi-2">Sua beleza, minha inspiração ✨</p>
+  <p class="tagline fi fi-2">Especialista em Alisamentos</p>
 
   <div class="social-icons fi fi-3" style="margin-top: 16px;">
     <a href="https://www.instagram.com/francieleteixeirabeauty/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da Franciele">
@@ -520,21 +542,21 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c-.2 0-.4-.1-.6-.2C7.1 16.4 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.7 0 3.2.9 4.2 2.3C13 4.9 14.5 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.1 7.5-8.4 10.9-.2.1-.4.2-.6.2Z"/></svg>
       </span>
       <p class="feature-title">Atendimento<br>Personalizado</p>
-      <p class="feature-desc">Escuto o que você precisa e monto um cuidado sob medida pra realçar sua beleza natural.</p>
+      <p class="feature-desc">Escuto você e crio um cuidado sob medida pra realçar sua beleza natural.</p>
     </div>
     <div class="feature-item">
       <span class="feature-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 14.7 8.5 22 9.2 16.5 13.9 18.2 21 12 17.3 5.8 21 7.5 13.9 2 9.2 9.3 8.5 12 2Z"/></svg>
       </span>
       <p class="feature-title">Experiência<br>e Qualidade</p>
-      <p class="feature-desc">Uso técnicas atualizadas e produtos de alta qualidade em todos os procedimentos.</p>
+      <p class="feature-desc">Uso técnicas atualizadas e produtos de qualidade em cada procedimento.</p>
     </div>
     <div class="feature-item">
       <span class="feature-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3.2"/></svg>
       </span>
       <p class="feature-title">Resultados<br>que Inspiram</p>
-      <p class="feature-desc">Mais que estética: autoestima, confiança e bem-estar pra você se sentir ainda melhor.</p>
+      <p class="feature-desc">Entrego mais que estética: autoestima, confiança e bem-estar pra você.</p>
     </div>
   </section>
 
